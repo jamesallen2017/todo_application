@@ -1,0 +1,374 @@
+body
+{
+	font-family: sans-serif;
+	background-color: white;
+}
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+nav	{
+	height: 5vh;
+	background-color: gray;
+}
+.nav-menu
+{
+	display:flex;
+	list-style: none;
+	width: 100%;
+	height: 100%;
+	justify-content: space-around;
+	align-items: center;
+	margin-left: auto;
+}
+.nav-menu .menu-list a , li
+{
+	color:white;
+	text-decoration: none;
+	font-size:13px;
+}
+.menu-list-right ul
+{
+	display:flex;
+	text-transform: uppercase;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+	list-style: none;
+	width: 300px;
+}
+.tool-content
+{
+	width:600px;
+	margin:0 auto;
+}
+.tool-menu
+{
+	display:flex;
+	justify-content: space-around;
+	align-content: center;
+	margin-right: auto;
+	width: 50%;
+	list-style: none;
+	text-transform: uppercase;
+	font-style: normal;
+	font-weight: bold;
+}
+.tool-menu .tool-list 
+{
+	color:black;
+	text-decoration: none;
+	font-size: 10px;
+}
+.tool-list-action
+{
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  font-family: arial, sans-serif;
+  text-transform: uppercase;
+  font-style: normal;
+  font-size: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+.tool-list-action:focus
+{
+    outline: none;
+    border: none;
+}
+.wrapper
+{
+	margin:0 auto;
+	margin-top: 50px;
+}
+.main-form {
+	background-color: white;
+	width:600px;
+	margin:0 auto;
+	margin-bottom: 50px;
+	box-shadow: 0px 0px 9px 0px black;
+	border-radius: 10px 10px 10px 10px;
+}
+input[type=date] {
+	width: 30%;
+	margin-left:20px;
+	padding:2px;
+	margin-bottom:20px;
+}
+.form-control {
+	width: 70%;
+	margin:20px;
+	height: 40px;
+	padding:2px;
+
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  top: 22px;
+  left: 10px;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+
+  opacity: 0;
+  position: relative;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  border:solid black;
+  border-width: thin;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 7px;
+  top:3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.btnAdd,.btnUpdate
+{
+	height: 40px;
+	width:10%;
+	right:20px;
+	position:relative;
+	border:none;
+	background-color:#008CBA;
+	font-weight: bold;
+	font-size: 13px;
+	color:white;
+}
+.btnAdd
+{
+	width:22%;
+}
+.btnCancel
+{
+	margin-top:20px;
+	padding: 12px 10px;
+	margin-left:-10px;
+	position: absolute;
+	border:none;
+	background-color:red;
+	font-size: 13px;
+	font-weight: bold;
+	color:white;
+}
+
+.sub-form
+{
+	background-color: white;
+	height: 70px;
+	width:600px;
+	display:flex;
+	margin:0 auto;
+	margin-top:20px;
+	box-shadow: 0px 0px 9px 0px black;
+	border-radius: 10px 10px 10px 10px;
+}
+.list-content
+{
+	height:50px;
+	width: 75%;
+	position: relative;
+	top:10px;
+	left:20px;
+	background-color:white;
+
+}
+.title-content
+{
+	font-style:  Serif;
+	height: 40px;
+}
+.list-content-footer
+{
+	display:flex;
+	justify-content: space-around;
+	align-content: center;
+	align-items: center;
+	margin-top:-9px;
+}
+.date-created
+{
+	width: 80%;
+	position: absolute;
+	display: flex;
+	left:0;
+/*	position: absolute;
+	right:0;
+	bottom: 0;
+	top:35px;
+	color:gray;*/
+}
+.todo-status-warning{
+	width: 20%;
+	position: absolute;
+	right:0;
+	background-color:red;
+	color:white;
+	display: flex;
+	border-radius: 3px;
+}
+.todo-status-success{
+	width: 20%;
+	position: absolute;
+	right:0;
+	background-color:green;
+	color:white;
+	display: flex;
+	border-radius: 3px;
+}
+.todo-status-success label, .todo-status-warning label
+{
+	margin:auto;
+	margin-left:auto;
+	font-size: 13px;
+	padding-right:5px;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+.date-created label
+{
+	margin-right:auto;
+	font-size: 13px;
+	margin-right:auto;
+	padding-right:5px;
+	padding-top:5px;
+	padding-bottom:5px;
+
+}
+a
+{
+	float:left;
+	margin:0 auto;
+	text-decoration: none;
+}
+
+.remove_icn {
+	height: 30px;
+	position:relative;
+	top:20px;
+	left:15px;
+}
+
+.edit_icn {
+	height: 30px;
+	top:20px;
+	position:relative;
+}
+
+
+
+/* REGISTER FORM */
+.Register-form
+{
+	margin:auto;
+	width:400px;
+}
+.register-form-control
+{
+	width:100%;
+	padding:5px;
+	margin:5px 5px 10px 0px;
+}
+.btn-form
+{
+	display:flex;
+	justify-content: space-around;
+	align-content: center;
+}
+.btn-control-primary, .btn-control-warning
+{
+	padding:5px 10px;
+	border:none;
+	font-size: 16px;
+	width: 49%;
+	color:black;
+	text-align: center;
+}
+.btn-control-primary, .btn-control-warning:focus
+{
+	outline: none;
+}
+.btn-control-primary
+{
+	background-color:#3c7dbd;
+}
+.btn-control-warning
+{
+	background-color:red;
+}
+.todo-logo 
+{
+	margin:auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 20px;	
+}
+.todo-logo img
+{
+	height: 200px;
+}
+.error-form
+{
+	padding:5px;
+}
+.error-form span
+{
+	color:red;
+	font-size: 13px;
+}
